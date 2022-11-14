@@ -1,0 +1,132 @@
+@import '../../Variables.scss';
+
+.about {
+    padding: 60px 0;
+    width: 90vw;
+    background-color: $bg;
+
+    h3 {
+        padding-bottom: 22px;
+        font-size: 26px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        margin-top: 120px;
+    }
+
+    &_infos {
+
+        .personal_infos {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0;
+
+            .green {
+                color: #5be85b;
+            }
+
+
+
+            li {
+                display: block;
+                width: 50%;
+                font-size: 21px;
+
+                .title {
+                    text-transform: capitalize;
+                    opacity: 0.6;
+                    font-weight: lighter;
+                }
+
+                .desc {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    .experience {
+
+        .exp,
+        .edu {
+            list-style: none;
+            padding: 0;
+            width: 45%;
+
+            li {
+                height: auto;
+                width: 100%;
+                position: relative;
+                padding-left: 80px;
+                margin-bottom: 60px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    bottom: 0;
+                    border-left: 2px solid #fff;
+                    border-radius: 20px;
+                    z-index: 1;
+                    opacity: 0.4;
+                }
+
+                span {
+                    color: #fff;
+                    font-size: 17px;
+                    padding: 5px 15px;
+                    display: inline-block;
+                    margin-bottom: 12px;
+                    border-radius: 20px;
+                    background-color: $bgLight;
+                    opacity: 0.8;
+                    text-transform: uppercase;
+                }
+
+                h5 {
+                    font-size: 21px;
+                    margin: 7px 0 10px;
+                    font-weight: lighter;
+                    text-transform: capitalize;
+                }
+
+                h4 {
+                    font-size: 21px;
+                    margin: 7px 0 10px;
+                    font-weight: lighter;
+                    opacity: 0.6;
+                    text-transform: uppercase;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 40px;
+                width: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $orange;
+                border-radius: 50%;
+                z-index: 10;
+
+                svg {
+                    transform: scale(0.5);
+                }
+            }
+        }
+
+        .exp_edu {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 60px;
+        }
+    }
+}
