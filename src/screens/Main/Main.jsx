@@ -7,7 +7,7 @@ function Main() {
         <div className="main">
             <div className="bgShape"></div>
             <div className="main_img">
-                <img src="assets/img/main_portrait.jpg" alt="My portrait" />
+                <img src="assets/img/main_portrait.webp" alt="My portrait" />
             </div>
             <div className="main_desc">
 

@@ -87,6 +87,60 @@ function About() {
             </div>
             <div className="skills">
                 <h3>My skills</h3>
+                <div className="skills_main">
+                    <div className="skills_wrapper">
+                        <div className="skill">
+                            <svg>
+                                <use href={sprites + '#html'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg>
+                                <use href={sprites + '#css'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg className='js'>
+                                <use href={sprites + '#js'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg className='react'>
+                                <use href={sprites + '#react'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg className='sass'>
+                                <use href={sprites + '#sass'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg className='bootstrap'>
+                                <use href={sprites + '#bootstrap'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg>
+                                <use href={sprites + '#git'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg className='node'>
+                                <use href={sprites + '#node'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg className='gulp'>
+                                <use href={sprites + '#gulp'} />
+                            </svg>
+                        </div>
+                        <div className="skill">
+                            <svg className='wordpress'>
+                                <use href={sprites + '#wordpress'} />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className="experience">
                 <h3>Experience & education</h3>

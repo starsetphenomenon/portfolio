@@ -2,8 +2,9 @@
 
 .about {
     padding: 60px 0;
-    width: 90vw;
+    width: 80vw;
     background-color: $bg;
+    margin: 0 auto;
 
     h3 {
         padding-bottom: 22px;
@@ -127,6 +128,87 @@
             justify-content: flex-start;
             align-items: flex-start;
             gap: 60px;
+        }
+    }
+
+    // HEXAGON SHAPES LAYOUT ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    .skills_main {
+        display: flex;
+        --s: 300px;
+        /* size  */
+        --m: 40px;
+        /* margin */
+        --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+    }
+
+    .skills_wrapper::before {
+        content: "";
+        width: calc(var(--s)/2 + var(--m));
+        float: left;
+        height: 120%;
+        shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px),
+                #000 0 var(--f));
+    }
+
+    .skills_wrapper {
+        font-size: 0;
+
+        .skill {
+            background-color: $bgLight;
+            width: var(--s);
+            margin: var(--m);
+            height: calc(var(--s)*1.1547);
+            display: inline-block;
+            font-size: initial;
+            clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+            background: $bgLight;
+            margin-bottom: calc(var(--m) - var(--s)*0.2885);
+            transition: all 0.3s;
+
+            &:hover {
+                transform: scale(1.2) rotateZ(-31deg);
+
+                svg {
+                    fill: $orange;
+                }
+            }
+
+            svg {
+                transform: scale(0.5);
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        // HEXAGON SHAPES LAYOUT ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        .node {
+            fill: green;
+        }
+
+        .bootstrap {
+            fill: rgb(154, 14, 247);
+        }
+
+        .sass {
+            fill: rgb(248, 151, 235);
+        }
+
+        .js {
+            fill: rgb(251, 251, 65);
+        }
+
+        .gulp {
+            fill: rgb(189, 29, 29);
+        }
+
+        .react {
+            fill: #61DAFB;
+        }
+
+        .wordpress {
+            fill: #21759B;
         }
     }
 }

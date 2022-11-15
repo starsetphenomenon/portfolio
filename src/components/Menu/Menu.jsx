@@ -25,7 +25,7 @@ function Menu() {
                     </svg>
                     <h2>About</h2>
                 </li>
-                <li name="portfolio" onClick={handleNavLink}>
+                <li name="works" onClick={handleNavLink}>
                     <svg>
                         <use href={sprites + '#case'} />
                     </svg>

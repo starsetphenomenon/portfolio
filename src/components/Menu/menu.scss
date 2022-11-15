@@ -41,14 +41,13 @@
 
         li {
             height: 50px;
-            width: 50px;
+            width: 100%;
             background-color: $bgLight;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            cursor: pointer;
             transition: all 0.3s;
 
             &:hover {
@@ -58,6 +57,7 @@
                     padding: 0 55px 0 30px;
                     transform: scaleX(1);
                     opacity: 1;
+                    cursor: pointer !important;
                 }
             }
 
