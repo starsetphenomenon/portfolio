@@ -5,6 +5,7 @@ import Menu from './components/Menu/Menu';
 import { Routes, Route } from "react-router-dom";
 import Cursor from './components/Cursor/Cursor';
 import Works from './screens/works/Works';
+import Contact from './screens/Contact/Contact';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" index element={<Main />} />
         <Route path="about" element={<About />} />
         <Route path="works" element={<Works />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </div>
   );
