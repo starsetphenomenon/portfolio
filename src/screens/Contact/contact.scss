@@ -2,6 +2,7 @@
 
 .contact {
     width: 90vw;
+    margin: 0 auto;
 
     .content {
         display: flex;
@@ -140,6 +141,110 @@
             ::placeholder {
                 font-size: 17px;
                 text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    .contact {
+        .content {
+            gap: 30px;
+
+            .info {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .contact {
+        .content {
+            gap: 30px;
+
+            .info {
+                width: 40%;
+
+                .item {
+                    justify-content: flex-start;
+
+                    .desc {
+                        width: 70%;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .contact {
+        width: 80vw;
+
+        .content {
+            gap: 30px;
+            flex-direction: column;
+
+            .info {
+                width: 90%;
+
+                .item {
+                    justify-content: flex-start;
+
+                    .desc {
+                        width: 70%;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+
+            .form {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .contact {
+        width: 80vw;
+
+        .content {
+            gap: 30px;
+            flex-direction: column;
+
+            .info {
+                width: 90%;
+
+                h3 {
+                    font-size: 21px;
+                    letter-spacing: 0.3rem;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+
+                .item {
+                    gap: 10px;
+                    justify-content: flex-start;
+
+                    svg {
+                        height: 30px;
+                        width: 30px;
+                    }
+
+                    .desc {
+                        width: 75%;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+
+            .form {
+                width: 80%;
             }
         }
     }
