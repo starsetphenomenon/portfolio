@@ -20,6 +20,7 @@
     .portfolio {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 30px;
 
@@ -147,14 +148,14 @@
 
 
             .cover {
-                transition: all 0.6s;
+                transition: all 450ms ease-in-out;
                 height: 100%;
                 width: 100%;
                 position: absolute;
                 left: 0;
                 top: 0;
                 border-radius: 0.5rem;
-                background-color: rgb(176, 126, 33);
+                background-color: rgb(187, 94, 54);
                 display: flex;
                 justify-content: center;
                 align-items: center;

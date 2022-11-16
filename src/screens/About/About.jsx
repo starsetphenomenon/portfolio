@@ -1,6 +1,8 @@
 import './about.scss';
 import Heading from '../../components/Heading/Heading';
 import sprites from '../../icons/icons.svg';
+import ButtonPrim from '../../components/ButtonPrim/ButtonPrim';
+
 
 function About() {
     let dob = '19961008';
@@ -84,6 +86,16 @@ function About() {
                         </span>
                     </li>
                 </ul>
+
+                <a href="/assets/CV — Junior front-end developer, Roman Viznij.pdf" download>
+                    <ButtonPrim text="Download CV">
+                        <svg>
+                            <use href={sprites + '#download'} />
+                        </svg>
+                    </ButtonPrim>
+                </a>
+
+
             </div>
             <div className="skills">
                 <h3>My skills</h3>

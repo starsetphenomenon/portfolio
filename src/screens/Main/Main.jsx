@@ -12,7 +12,7 @@ function Main() {
             <div className="main_desc">
 
 
-                <h1>I'm Roman Viznij.
+                <h1>I'm Roman Viznij
                     <br></br>
                     <span>Web developer</span>
                 </h1>

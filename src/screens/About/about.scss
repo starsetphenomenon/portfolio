@@ -17,17 +17,22 @@
 
     &_infos {
 
+        a {
+            display: block;
+            width: 200px;
+        }
+
         .personal_infos {
             list-style: none;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             padding: 0;
+            margin-bottom: 60px;
 
             .green {
                 color: #5be85b;
             }
-
 
 
             li {
@@ -209,6 +214,175 @@
 
         .wordpress {
             fill: #21759B;
+        }
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    .about {
+        .skills_main {
+            --s: 200px;
+            /* size  */
+            --m: 20px;
+            /* margin */
+            --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+        }
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .about {
+        &_infos {
+            ul {
+                li {
+                    font-size: 17px !important;
+                }
+            }
+        }
+
+        .skills_main {
+            --s: 160px;
+            /* size  */
+            --m: 20px;
+            /* margin */
+            --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+        }
+
+        .experience {
+            .exp_edu {
+                ul {
+                    li {
+                        padding-left: 60px;
+
+                        h5 {
+                            font-size: 19px;
+                        }
+
+                        h4 {
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .about {
+        h3 {
+            font-size: 21px;
+        }
+
+        &_infos {
+            .personal_infos {
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                }
+            }
+
+            ul {
+                li {
+                    font-size: 17px !important;
+                }
+            }
+        }
+
+        .skills_main {
+            --s: 100px;
+            /* size  */
+            --m: 20px;
+            /* margin */
+            --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+        }
+
+        .experience {
+            .exp_edu {
+                ul {
+                    li {
+                        padding-left: 50px;
+
+                        h5 {
+                            font-size: 17px;
+                        }
+
+                        h4 {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .about {
+        h3 {
+            font-size: 19px;
+            letter-spacing: 0.3rem;
+        }
+
+        &_infos {
+            .personal_infos {
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                }
+            }
+
+            ul {
+                li {
+                    font-size: 15px !important;
+
+                    .desc {
+                        margin-left: 5px !important;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+        }
+
+        .skills_main {
+            --s: 80px;
+            /* size  */
+            --m: 10px;
+            /* margin */
+            --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+        }
+
+        .experience {
+            .exp_edu {
+                gap: 0;
+
+                .exp {
+                    border-bottom: 1px solid $orange;
+                }
+
+                .exp,
+                .edu {
+                    width: 90%;
+                }
+
+                flex-direction: column;
+
+                ul {
+                    li {
+                        padding-left: 50px;
+
+                        h5 {
+                            font-size: 17px;
+                        }
+
+                        h4 {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

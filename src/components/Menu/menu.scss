@@ -42,13 +42,25 @@
         li {
             height: 50px;
             width: 100%;
-            background-color: $bgLight;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            transition: all 0.3s;
+            background-color: $bgLight;
+
+            &:has(.active) {
+                background-color: $orange;
+            }
+
+            a {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                transition: all 0.3s;
+                text-decoration: none;
+                color: #fff;
+
+            }
 
             &:hover {
                 background-color: $orange;
@@ -65,6 +77,45 @@
                 height: 50%;
                 width: 50%;
                 z-index: 10;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .menu {
+        left: 0;
+        top: calc(100% - 30px);
+        height: 60px;
+        width: 100%;
+        background: $bgLight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0;
+            width: 100%;
+
+            li {
+                height: 40px;
+                width: 40px;
+                background: #444 !important;
+
+                &:has(.active) {
+                    background-color: $orange !important;
+                }
+
+                &:hover {
+                    background-color: $orange;
+
+                    h2 {
+                        transform: scaleX(0);
+                        opacity: 0;
+                    }
+                }
             }
         }
     }

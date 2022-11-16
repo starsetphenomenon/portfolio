@@ -1,0 +1,67 @@
+@import '../../Variables.scss';
+
+.button_prim {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    cursor: pointer !important;
+
+    button {
+        height: 100%;
+        width: 120%;
+        border-radius: 30px;
+        background: none;
+        color: #fff;
+        border: 2px solid $orange;
+        padding-right: 20%;
+        font-size: 19px;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+        z-index: 10;
+        cursor: pointer !important;
+
+        &:hover {
+            &::before {
+                transform: translateX(0);
+            }
+        }
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 30px;
+            background: $orange;
+            transform: translateX(100%);
+            transition: all 0.3s ease-out;
+            z-index: -1;
+        }
+    }
+
+    .icon {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        right: -20%;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background: $orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+
+        svg {
+            height: 50%;
+            width: 50%;
+
+        }
+    }
+
+}

@@ -1,6 +1,7 @@
 import './contact.scss';
 import Heading from '../../components/Heading/Heading';
 import sprites from '../../icons/icons.svg';
+import ButtonPrim from '../../components/ButtonPrim/ButtonPrim';
 
 function Contact() {
 
@@ -60,14 +61,11 @@ function Contact() {
                 <form className='form' action="#">
                     <input type="text" name="name" id="name" placeholder='Your name' />
                     <textarea placeholder='Your message' name="message" id="message" cols="30" rows="10"></textarea>
-                    <div className="send">
-                        <div className="icon">
-                            <svg>
-                                <use href={sprites + '#send'} />
-                            </svg>
-                        </div>
-                        <button>Send message</button>
-                    </div>
+                    <ButtonPrim text="Send message">
+                        <svg>
+                            <use href={sprites + '#send'} />
+                        </svg>
+                    </ButtonPrim>
 
                 </form>
             </div>
