@@ -38,13 +38,16 @@ function Contact() {
         }
 
         setMailSent(true)
-        e.target.reset();
-        /* emailjs.sendForm('service_icldehq', 'template_ta52gji', form.current, 'RyN1J3KsfCRnE7yVi')
+        setFormInputs({
+            name: '',
+            message: '',
+        })
+        emailjs.sendForm('service_icldehq', 'template_ta52gji', form.current, 'RyN1J3KsfCRnE7yVi')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
-            }); */
+            });
 
         setTimeout(() => {
             setMailSent(false)
