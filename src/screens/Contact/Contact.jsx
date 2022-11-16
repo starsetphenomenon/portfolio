@@ -2,12 +2,24 @@ import './contact.scss';
 import Heading from '../../components/Heading/Heading';
 import sprites from '../../icons/icons.svg';
 import ButtonPrim from '../../components/ButtonPrim/ButtonPrim';
+import { Helmet } from "react-helmet-async";
+import Loader from '../../components/Loader/Loader';
+import { useState, useEffect } from 'react';
 
 function Contact() {
 
+    const [loadingDone, setLoadingDone] = useState(false);
+
+    useEffect(() => {
+        setLoadingDone(true)
+    }, [])
 
     return (
-        <div className="contact">
+        <div className={loadingDone ? 'contact done' : 'contact'}>
+            <Loader />
+            <Helmet>
+                <title>Contact</title>
+            </Helmet>
             <Heading heading="Get in" hspan="touch" span="contact" />
             <div className="content">
                 <div className="info">

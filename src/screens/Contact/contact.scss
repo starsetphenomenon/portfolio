@@ -1,15 +1,28 @@
 @import '../../Variables.scss';
 
+.contact.done {
+    margin: -60px auto 0 auto;
+}
+
 .contact {
     width: 90vw;
-    margin: 0 auto;
+    margin-top: 0 auto;
+    transition: all 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
 
     .content {
+        margin-top: 30px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
         gap: 60px;
+        height: 50% !important;
 
         .info {
             display: flex;
@@ -107,7 +120,7 @@
         }
 
         .form {
-            height: 80vh;
+            height: auto;
             width: 30vw;
             display: flex;
             flex-direction: column;

@@ -1,10 +1,15 @@
 @import '../../Variables.scss';
 
+.about.done {
+    margin: 0 auto;
+}
+
 .about {
     padding: 60px 0;
     width: 80vw;
     background-color: $bg;
-    margin: 0 auto;
+    margin: 60px auto;
+    transition: all 0.8s ease-in-out;
 
     h3 {
         padding-bottom: 22px;

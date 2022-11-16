@@ -2,9 +2,12 @@ import './about.scss';
 import Heading from '../../components/Heading/Heading';
 import sprites from '../../icons/icons.svg';
 import ButtonPrim from '../../components/ButtonPrim/ButtonPrim';
-
+import { Helmet } from "react-helmet-async";
+import Loader from '../../components/Loader/Loader';
+import { useState, useEffect } from 'react';
 
 function About() {
+
     let dob = '19961008';
     let year = Number(dob.substr(0, 4));
     let month = Number(dob.substr(4, 2)) - 1;
@@ -15,8 +18,18 @@ function About() {
         age--;
     }
 
+    const [loadingDone, setLoadingDone] = useState(false);
+
+    useEffect(() => {
+        setLoadingDone(true)
+    }, [])
+
     return (
-        <div className="about">
+        <div className={loadingDone ? 'about done' : 'about'}>
+            <Loader />
+            <Helmet>
+                <title>About</title>
+            </Helmet>
             <Heading heading="About" hspan="me" span="resume" />
             <div className="about_infos">
                 <h3>Personal infos</h3>

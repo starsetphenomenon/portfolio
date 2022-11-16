@@ -1,10 +1,15 @@
 @import '../../Variables.scss';
 
+.works.done {
+    margin: 0 auto 120px auto;
+}
+
 .works {
     width: 70vw;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 120px;
+    margin: 120px auto 120px auto;
+    transition: all 1.6s ease-out;
 
 
     .wrapper {

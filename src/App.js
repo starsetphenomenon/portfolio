@@ -6,18 +6,22 @@ import { Routes, Route } from "react-router-dom";
 import Cursor from './components/Cursor/Cursor';
 import Works from './screens/works/Works';
 import Contact from './screens/Contact/Contact';
+import { HelmetProvider } from "react-helmet-async";
+
 
 function App() {
   return (
     <div className="App">
-      <Cursor />
-      <Menu />
-      <Routes>
-        <Route path="/" index element={<Main />} />
-        <Route path="about" element={<About />} />
-        <Route path="works" element={<Works />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes>
+      <HelmetProvider>
+        <Cursor />
+        <Menu />
+        <Routes>
+          <Route path="/" index element={<Main />} />
+          <Route path="about" element={<About />} />
+          <Route path="works" element={<Works />} />
+          <Route path="contact" element={<Contact />} />
+        </Routes>
+      </HelmetProvider>
     </div>
   );
 }

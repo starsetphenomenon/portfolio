@@ -1,9 +1,17 @@
 import './works.scss';
 import Heading from '../../components/Heading/Heading';
 import sprites from '../../icons/icons.svg';
-import { useState } from 'react';
+import { Helmet } from "react-helmet-async";
+import Loader from '../../components/Loader/Loader';
+import { useState, useEffect } from 'react';
 
 function Works() {
+
+    const [loadingDone, setLoadingDone] = useState(false);
+
+    useEffect(() => {
+        setLoadingDone(true)
+    }, [])
 
     const works = {
         'gradient-generator': {
@@ -74,7 +82,11 @@ function Works() {
 
 
     return (
-        <div className="works">
+        <div className={loadingDone? 'works done' : 'works'}>
+            <Loader />
+            <Helmet>
+                <title>Works</title>
+            </Helmet>
             {active && <div onClick={handleWork} className="wrapper"></div>}
             <Heading heading="My" hspan="portfolio" span="works" />
             <div className="portfolio">
