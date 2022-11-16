@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
+    position: relative;
 
     .content {
         margin-top: 30px;
@@ -196,9 +196,14 @@
     .contact {
         width: 80vw;
 
+        .heading {
+            margin-top: 120px;
+        }
+
         .content {
             gap: 30px;
             flex-direction: column;
+            margin-bottom: 120px;
 
             .info {
                 width: 90%;
@@ -224,20 +229,27 @@
     .contact {
         width: 80vw;
 
+        .heading {
+            margin-top: 120px;
+            margin-bottom: 0;
+        }
+
         .content {
+            width: 90%;
             gap: 30px;
             flex-direction: column;
+            margin-bottom: 120px;
 
             .info {
                 width: 90%;
 
                 h3 {
-                    font-size: 21px;
+                    font-size: 19px;
                     letter-spacing: 0.3rem;
                 }
 
                 p {
-                    font-size: 17px;
+                    font-size: 15px;
                 }
 
                 .item {
@@ -250,6 +262,7 @@
                     }
 
                     .desc {
+                        font-size: 15px;
                         width: 75%;
                         word-wrap: break-word;
                     }

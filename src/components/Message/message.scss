@@ -1,0 +1,27 @@
+.mailSent.success {
+    transform: translateX(0);
+}
+
+.mailSent {
+    position: absolute;
+    bottom: 8%;
+    right: 0;
+    padding: 5px 15px;
+    height: 60px;
+    width: auto;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: all 0.6s ease-in-out;
+    transform: translateX(200%);
+    z-index: 100;
+
+    .msg {
+        font-weight: lighter;
+        font-size: 21px;
+        margin: 0;
+        color: greenyellow;
+    }
+}
