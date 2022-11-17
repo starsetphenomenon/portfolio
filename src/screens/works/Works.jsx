@@ -88,7 +88,7 @@ function Works() {
                 <title>Works</title>
             </Helmet>
             {active && <div onClick={handleWork} className="wrapper"></div>}
-            <Heading heading="My" hspan="portfolio" span="works" />
+            <Heading parVal={[-180, 0]} heading="My" hspan="portfolio" span="works" />
             <div className="portfolio">
                 <div className={active ? 'info active' : 'info'}>
                     <div onClick={handleWork} className="close">

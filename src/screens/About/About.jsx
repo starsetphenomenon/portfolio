@@ -5,6 +5,8 @@ import ButtonPrim from '../../components/ButtonPrim/ButtonPrim';
 import { Helmet } from "react-helmet-async";
 import Loader from '../../components/Loader/Loader';
 import { useState, useEffect } from 'react';
+import { Parallax } from 'react-scroll-parallax';
+
 
 function About() {
 
@@ -30,7 +32,7 @@ function About() {
             <Helmet>
                 <title>About</title>
             </Helmet>
-            <Heading heading="About" hspan="me" span="resume" />
+            <Heading parVal={[-180, 0]} heading="About" hspan="me" span="resume" />
             <div className="about_infos">
                 <h3>Personal infos</h3>
                 <ul className='personal_infos'>
@@ -112,60 +114,62 @@ function About() {
             </div>
             <div className="skills">
                 <h3>My skills</h3>
-                <div className="skills_main">
-                    <div className="skills_wrapper">
-                        <div className="skill">
-                            <svg>
-                                <use href={sprites + '#html'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg>
-                                <use href={sprites + '#css'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg className='js'>
-                                <use href={sprites + '#js'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg className='react'>
-                                <use href={sprites + '#react'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg className='sass'>
-                                <use href={sprites + '#sass'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg className='bootstrap'>
-                                <use href={sprites + '#bootstrap'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg>
-                                <use href={sprites + '#git'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg className='node'>
-                                <use href={sprites + '#node'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg className='gulp'>
-                                <use href={sprites + '#gulp'} />
-                            </svg>
-                        </div>
-                        <div className="skill">
-                            <svg className='wordpress'>
-                                <use href={sprites + '#wordpress'} />
-                            </svg>
+                <Parallax scale={[0.9, 1.1]}>
+                    <div className="skills_main">
+                        <div className="skills_wrapper">
+                            <div className="skill">
+                                <svg>
+                                    <use href={sprites + '#html'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg>
+                                    <use href={sprites + '#css'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg className='js'>
+                                    <use href={sprites + '#js'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg className='react'>
+                                    <use href={sprites + '#react'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg className='sass'>
+                                    <use href={sprites + '#sass'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg className='bootstrap'>
+                                    <use href={sprites + '#bootstrap'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg>
+                                    <use href={sprites + '#git'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg className='node'>
+                                    <use href={sprites + '#node'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg className='gulp'>
+                                    <use href={sprites + '#gulp'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
+                                <svg className='wordpress'>
+                                    <use href={sprites + '#wordpress'} />
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Parallax>
             </div>
             <div className="experience">
                 <h3>Experience & education</h3>
@@ -232,7 +236,7 @@ function About() {
                     </ul>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

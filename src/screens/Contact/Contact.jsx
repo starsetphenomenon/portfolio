@@ -70,7 +70,7 @@ function Contact() {
             <Helmet>
                 <title>Contact</title>
             </Helmet>
-            <Heading heading="Get in" hspan="touch" span="contact" />
+            <Heading parVal={[0, 0]} heading="Get in" hspan="touch" span="contact" />
             <div className="content">
                 <div className="info">
                     <h3>DON'T BE SHY!</h3>
