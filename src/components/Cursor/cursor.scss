@@ -29,3 +29,11 @@
     background-color: #ff8c005c;
     //mix-blend-mode: difference;
 }
+
+@media (hover: none) {
+
+    .cursor-dot,
+    .cursor-dot-outline {
+        display: none;
+    }
+}

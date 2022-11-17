@@ -85,13 +85,15 @@
 @media (max-width: 991px) {
     .menu {
         left: 0;
-        top: calc(100% - 30px);
+        bottom: 0;
         height: 60px;
+        top: inherit;
         width: 100%;
         background: $bgLight;
         display: flex;
         justify-content: center;
         align-items: center;
+        transform: translateY(0);
 
         ul {
             flex-direction: row;
