@@ -14,14 +14,6 @@ function Works() {
     }, [])
 
     const works = {
-        'gradient-generator': {
-            'heading': 'gradient generator',
-            'project': 'website',
-            'client': 'pet project',
-            'languages': 'HTML, CSS, JS',
-            'preview': 'https://starsetphenomenon.github.io/gradient-generator/',
-            'img': '/assets/img/works/gradient.webp',
-        },
         'knife-store': {
             'heading': 'online store',
             'project': 'web appliaction',
@@ -29,6 +21,14 @@ function Works() {
             'languages': 'React, SCSS',
             'preview': 'https://store-project-local-db.vercel.app/',
             'img': '/assets/img/works/react-store-project.webp',
+        },
+        'gradient-generator': {
+            'heading': 'gradient generator',
+            'project': 'website',
+            'client': 'pet project',
+            'languages': 'HTML, CSS, JS',
+            'preview': 'https://starsetphenomenon.github.io/gradient-generator/',
+            'img': '/assets/img/works/gradient.webp',
         },
         'rootz': {
             'heading': 'Rootz',
@@ -72,17 +72,38 @@ function Works() {
         }
     }
 
+    const sliderKeys = Object.keys(works)
+
     const [active, setActive] = useState(false);
 
     const handleWork = (e) => {
         e.stopPropagation()
         setActive(prev => !prev)
-        console.log(active)
     }
 
 
+
+
+    const nextSlide = () => {
+        let index = sliderKeys.indexOf(active);
+        if (index >= sliderKeys.length - 1) {
+            index = -1;
+        }
+        const slide = sliderKeys[index + 1];
+        setActive(slide)
+    }
+
+    const prevSlide = () => {
+        let index = sliderKeys.indexOf(active);
+        if (index <= 0) {
+            index = sliderKeys.length;
+        }
+        const slide = sliderKeys[index - 1];
+        setActive(slide)
+    }
+
     return (
-        <div className={loadingDone? 'works done' : 'works'}>
+        <div className={loadingDone ? 'works done' : 'works'}>
             <Loader />
             <Helmet>
                 <title>Works</title>
@@ -91,6 +112,18 @@ function Works() {
             <Heading parVal={[-180, 0]} heading="My" hspan="portfolio" span="works" />
             <div className="portfolio">
                 <div className={active ? 'info active' : 'info'}>
+                    <div className="navBtns">
+                        <div onClick={nextSlide} className="next">
+                            <svg>
+                                <use href={sprites + '#arrow'} />
+                            </svg>
+                        </div>
+                        <div onClick={prevSlide} className="prev">
+                            <svg>
+                                <use href={sprites + '#arrow'} />
+                            </svg>
+                        </div>
+                    </div>
                     <div onClick={handleWork} className="close">
                         <span></span>
                         <span></span>
