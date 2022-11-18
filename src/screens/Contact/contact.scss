@@ -128,6 +128,11 @@
             align-items: flex-start;
             gap: 30px;
 
+            textarea {
+                resize: vertical;
+            }
+
+
             input {
                 margin-top: 10px;
                 border: 1px solid #111;
@@ -274,7 +279,6 @@
 
             .form {
                 width: 80%;
-                
             }
         }
     }
