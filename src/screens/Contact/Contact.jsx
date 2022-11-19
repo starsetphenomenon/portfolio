@@ -44,12 +44,12 @@ function Contact() {
             name: '',
             message: '',
         })
-          emailjs.sendForm('service_icldehq', 'template_ta52gji', form.current, 'RyN1J3KsfCRnE7yVi')
-              .then((result) => {
-                  console.log(result.text);
-              }, (error) => {
-                  console.log(error.text);
-              });
+        emailjs.sendForm('service_icldehq', 'template_ta52gji', form.current, 'RyN1J3KsfCRnE7yVi')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
 
         setTimeout(() => {
             setMailSent(false)
@@ -79,18 +79,22 @@ function Contact() {
                         creative ideas or opportunities to be part of your visions.
                     </p>
                     <div className="item">
-                        <svg>
-                            <use href={sprites + '#mail'} />
-                        </svg>
+                        <a href="mailto:starsetphenomenon@gmail.com">
+                            <svg>
+                                <use href={sprites + '#mail'} />
+                            </svg>
+                        </a>
                         <div className="desc">
                             <h4>Mail me</h4>
-                            <h5>starsetphenomenon@gmail.com</h5>
+                            <a href="mailto:starsetphenomenon@gmail.com">starsetphenomenon@gmail.com</a>
                         </div>
                     </div>
                     <div className="item">
-                        <svg>
-                            <use href={sprites + '#phone'} />
-                        </svg>
+                        <a href="tel:+380976889429">
+                            <svg>
+                                <use href={sprites + '#phone'} />
+                            </svg>
+                        </a>
                         <div className="desc">
                             <h4>Call me</h4>
                             <a href="tel:+380976889429">+380976889429</a>
