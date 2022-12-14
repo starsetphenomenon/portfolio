@@ -56,7 +56,6 @@
 
             .next,
             .prev {
-                cursor: pointer;
                 position: absolute;
                 top: 50%;
                 height: 40px;
@@ -70,11 +69,19 @@
 
             .next {
                 right: -8%;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
 
             .prev {
                 left: -8%;
                 transform: rotate(180deg);
+
+                &:hover {
+                    transform: rotate(180deg) scale(1.2);
+                }
             }
 
             .close {
@@ -85,8 +92,11 @@
                 top: -20px;
                 border-radius: 50%;
                 border: 2px solid #fff;
-                cursor: pointer;
                 z-index: 150;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
 
                 span {
                     display: block;

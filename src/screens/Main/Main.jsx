@@ -8,11 +8,11 @@ function Main() {
     const [loadingDone, setLoadingDone] = useState(false);
 
     useEffect(() => {
-        setLoadingDone(true)
+        setLoadingDone(true)           
     }, [])
 
     return (
-        <div className={loadingDone?'main done' : 'main'}>
+        <div className={loadingDone ? 'main done' : 'main'}>
             <Loader />
             <Helmet>
                 <title>Portfolio - Home</title>

@@ -14,6 +14,14 @@ function Works() {
     }, [])
 
     const works = {
+        'absences-calendar': {
+            'heading': 'absences calendar',
+            'project': 'web appliaction',
+            'client': 'pet project',
+            'languages': 'Angular, NGRX, Reactive Forms, Moment.JS, A. Material',
+            'preview': 'https://angu-calendar.vercel.app/',
+            'img': '/assets/img/works/angu-calendar.webp',
+        },
         'knife-store': {
             'heading': 'online store',
             'project': 'web appliaction',
@@ -164,6 +172,12 @@ function Works() {
                     </div>
                 </div>
 
+                <div name="absences-calendar" onClick={(e) => setActive(e.currentTarget.getAttribute('name'))} className="item">
+                    <img src="/assets/img/works/angu-calendar.webp" alt="project8" />
+                    <div className="cover">
+                        <h3>Absences calendar</h3>
+                    </div>
+                </div>
                 <div name="knife-store" onClick={(e) => setActive(e.currentTarget.getAttribute('name'))} className="item">
                     <img src="/assets/img/works/react-store-project.webp" alt="project1" />
                     <div className="cover">
