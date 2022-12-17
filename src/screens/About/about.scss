@@ -221,11 +221,31 @@
         .wordpress {
             fill: #21759B;
         }
+
+        .angular {
+            fill: #DD0031;
+        }
+
+        .ngrx {
+            fill: #ba2bd2;
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    .about {
+        .skills {
+            margin-bottom: 600px;
+        }
     }
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
     .about {
+        .skills {
+            margin-bottom: 400px;
+        }
+
         .skills_main {
             --s: 200px;
             /* size  */
@@ -238,6 +258,10 @@
 
 @media (max-width: 991px) and (min-width: 768px) {
     .about {
+        .skills {
+            margin-bottom: 300px;
+        }
+
         &_infos {
             ul {
                 li {
@@ -276,6 +300,9 @@
 
 @media (max-width: 767px) and (min-width: 576px) {
     .about {
+        .skills {
+            margin-bottom: 250px;
+        }
         h3 {
             font-size: 21px;
         }
