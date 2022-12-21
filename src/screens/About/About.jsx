@@ -133,6 +133,11 @@ function About() {
                                 </svg>
                             </div>
                             <div className="skill">
+                                <svg className='ts'>
+                                    <use href={sprites + '#ts'} />
+                                </svg>
+                            </div>
+                            <div className="skill">
                                 <svg className='react'>
                                     <use href={sprites + '#react'} />
                                 </svg>
