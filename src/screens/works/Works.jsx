@@ -18,8 +18,8 @@ function Works() {
             'heading': 'absences calendar',
             'project': 'web appliaction',
             'client': 'pet project',
-            'languages': 'Angular, NGRX, Reactive Forms, Moment.JS, A. Material',
-            'preview': 'https://angu-calendar.vercel.app/',
+            'languages': 'Angular, NGRX, Reactive Forms, Moment.JS, A. Material, NestJS, PostgreSQL/TypeORM',
+            'preview': 'https://calendar-front-rosy.vercel.app/login',
             'img': '/assets/img/works/angu-calendar.webp',
         },
         'knife-store': {
