@@ -156,7 +156,7 @@ function Works() {
                             <svg>
                                 <use href={sprites + '#code'} />
                             </svg>
-                            <span>Languages: </span>
+                            <span>Stack: </span>
                             <h4>{works[active]?.languages}</h4>
                         </div>
                         <div className="desc_item">
